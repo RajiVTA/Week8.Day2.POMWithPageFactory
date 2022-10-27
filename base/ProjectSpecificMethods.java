@@ -41,13 +41,6 @@ public class ProjectSpecificMethods {
 		FileInputStream fis=new FileInputStream(new File("src/main/resources/config.properties"));
 		prop.load(fis); //Load the Properties files
 		
-		String uName = prop.getProperty("username");
-		System.out.println("UserName:"+uName);
-		System.out.println(prop.getProperty("lang"));
-		
-		System.out.println(prop.getProperty("browser"));
-		System.out.println(prop.getProperty("password"));
-		
 		String url=prop.getProperty("url");
 		driver.get(url);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
@@ -75,3 +68,12 @@ public class ProjectSpecificMethods {
 		return ReadExcelData.readSheetData(fileName);
 	}
 }
+
+
+
+//String uName = prop.getProperty("username");
+//System.out.println("UserName:"+uName);
+//System.out.println(prop.getProperty("lang"));
+//
+//System.out.println(prop.getProperty("browser"));
+//System.out.println(prop.getProperty("password"));
